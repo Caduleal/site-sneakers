@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+
+}
+:root {
+    --primary-color: #508D4E;
+    --secondary-color: #80AF81;
+    --background-color: #e3f8e5;
+    --dark-color: #1A5319;
+    --price-color:#55AD9B;
+  }
+/* Cabeçalho */
+header{
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 20px;
+    text-align: center;
+    border-bottom:3px solid var(--dark-color);
+}
+/*Grid de produtos*/
+.container{
+    background-color:var(--background-color);
+    min-height: 60vh;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.products-container{
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    flex:1 1 calc(33.333% - 20px);
+    margin: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+
+}
+
+.product-image{
+    height: 300px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-position: center;
+    background-size: cover;
+
+}
+#img-1 {
+    background-image: url('../img/tenis1.jpg');
+}
+#img-2 {
+    background-image: url('../img/tenis2.jpg');
+}
+#img-3 {
+    background-image: url('../img/tenis3.jpg');
+}
+#img-4 {
+    background-image: url('../img/tenis4.jpg');
+}
+#img-5 {
+    background-image: url('../img/tenis5.jpg');
+}
+#img-6 {
+    background-image: url('../img/tenis6.jpg');
+}
+h3{
+    margin-bottom: 10px;
+    color:var(--dark-color);
+    border-left: 5px solid var(--price-color);
+    padding-left: 7px;
+    font-size: 24px;
+}
+
+.descricao{
+    color: var(--dark-color);
+    font-weight:600;
+}
+.valor{
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    background:var(--price-color);
+    color: var(--background-color);
+    margin-bottom: 5PX;
+    transition: 0.5S;
+    
+}
+.valor:hover{
+    background-color: var(--dark-color);
+}
+.bold{
+    font-weight: bold;
+
+}
+.btn{
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color:var(--primary-color) ;
+    color: var(--background-color);
+    padding: 15px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.btn:hover{
+    background-color: var(--dark-color);
+}
+/* Footer */
+footer{
+    background-color:var(--primary-color);
+    color:var(--background-color);
+    border-top: 3px solid var(--dark-color);
+    text-align: center;
+    padding: 30px;
+
+}
+@media (max-width: 768px){
+    .card{
+        flex: 1 1 calc(50% - 20px);
+
+    }
+}
+@media(max-width: 480px){
+    .card{
+        flex: 1 1 100%;
+    }
+}
